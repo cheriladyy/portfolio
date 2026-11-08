@@ -1,0 +1,12 @@
+server {
+    listen 80;
+    server_name localhost;
+
+    # Her cevaba, APP_ENV değerini taşıyan bir header ekler
+    add_header X-App-Env "${APP_ENV}";
+
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html;
+    }
+}
