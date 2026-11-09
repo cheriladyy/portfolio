@@ -13,8 +13,6 @@ jobs:
   trigger-jenkins:
     runs-on: ubuntu-latest
     steps:
-      - name: debug
-        run: echo "repo:${{ github.repository }}:ref:${{ github.ref }}"
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v6.3.0
         with:
