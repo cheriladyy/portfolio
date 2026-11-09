@@ -1,6 +1,9 @@
 #declare the base image
 FROM nginx:alpine
 
+#install htpasswd
+RUN apk add --no-cache apache2-utils
+
 #set a work directory
 WORKDIR /usr/share/nginx/html
 
