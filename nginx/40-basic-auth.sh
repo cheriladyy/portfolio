@@ -6,5 +6,4 @@ if [ -z "$BASIC_AUTH_USER" ] || [ -z "$BASIC_AUTH_PASS" ]; then
     exit 1
 fi
 
-echo "$BASIC_AUTH_USER:$(mkpasswd -m sha512 "$BASIC_AUTH_PASS")" > /etc/nginx/.htpasswd
-
+htpasswd -bc /etc/nginx/.htpasswd "$BASIC_AUTH_USER" "$BASIC_AUTH_PASS"
