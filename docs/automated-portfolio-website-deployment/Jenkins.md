@@ -293,7 +293,7 @@ Sunucuda .env dosyasında tuttuğun kullanıcı adını ve şifreyi Jenkins da b
 
 Not: Jenkinsfile Groovy dilinde yazılır.
 
-```json
+```groovy
 pipeline {
     agent any #Run this on any available Jenkins agent
 
